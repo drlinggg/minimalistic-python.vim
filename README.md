@@ -2,7 +2,7 @@
 
 A minimal **dark** Neovim colorscheme: a pure-black background, white symbols,
 and a tiny accent set. A sibling of
-[pustota.nvim](https://github.com/drlinggg/pustota.nvim) (its light counterpart).
+[pustota-python.nvim](https://github.com/drlinggg/pustota-python.nvim) (its light counterpart).
 Tuned for Python (Treesitter + pyright via coc.nvim), but the standard
 highlight groups make it work everywhere.
 
@@ -45,4 +45,14 @@ Then run `:PlugInstall`.
 use "drlinggg/minimalistic-python.vim"
 ```
 
-Requires a true-color terminal (`set termguicolors`).
+## Requirements
+
+- A true-color terminal (`set termguicolors`).
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): the
+  theme highlights through Treesitter capture groups and auto-installs parsers
+  / enables highlighting when it is present. Install it with your plugin
+  manager:
+
+  ```vim
+  Plug 'nvim-treesitter/nvim-treesitter'
+  ```

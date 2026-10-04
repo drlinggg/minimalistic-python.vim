@@ -145,11 +145,11 @@ function M.load()
     ["@property"]             = { fg = p.fg },
     ["@field"]                = { fg = p.fg },
 
-    ["@function"]             = { fg = p.green2 },
-    ["@function.call"]        = { fg = p.green2 },
+    ["@function"]             = { fg = p.green2 }, -- definitions keep the accent
+    ["@function.call"]        = { fg = p.fg },     -- calls: no color
     ["@function.method"]      = { fg = p.green2 },
-    ["@function.method.call"] = { fg = p.green2 },
-    ["@function.builtin"]     = { fg = p.fg }, -- print / len stay plain
+    ["@function.method.call"] = { fg = p.fg },     -- method calls: no color
+    ["@function.builtin"]     = { fg = p.pink },   -- builtins: light pink
     ["@function.macro"]       = { fg = p.green2 },
     ["@constructor"]          = { fg = p.green2 },
 
@@ -206,8 +206,12 @@ function M.load()
     ["@lsp.type.struct"]        = { fg = p.green2 },
     ["@lsp.type.type"]          = { fg = p.green2 },
     ["@lsp.type.typeParameter"] = { fg = p.green2 },
-    ["@lsp.type.function"]      = { fg = p.green2 },
-    ["@lsp.type.method"]        = { fg = p.green2 },
+    ["@lsp.type.function"]      = { fg = p.fg }, -- calls/refs: no color
+    ["@lsp.type.method"]        = { fg = p.fg },
+    ["@lsp.typemod.function.definition"]  = { fg = p.green2 }, -- defs keep accent
+    ["@lsp.typemod.function.declaration"] = { fg = p.green2 },
+    ["@lsp.typemod.method.definition"]    = { fg = p.green2 },
+    ["@lsp.typemod.method.declaration"]   = { fg = p.green2 },
     ["@lsp.type.decorator"]     = { fg = p.green },
     ["@lsp.type.keyword"]       = { fg = p.green },
     ["@lsp.type.namespace"]     = { fg = p.fg },
@@ -216,7 +220,8 @@ function M.load()
     ["@lsp.type.property"]      = { fg = p.fg },
     ["@lsp.type.enumMember"]    = { fg = p.pink },
     ["@lsp.typemod.variable.readonly"] = { fg = p.pink }, -- constants
-    ["@lsp.typemod.function.builtin"]  = { fg = p.fg },
+    ["@lsp.typemod.function.defaultLibrary"] = { fg = p.pink }, -- builtins
+    ["@lsp.typemod.method.defaultLibrary"]   = { fg = p.pink },
 
     -- old-style treesitter groups still referenced by some configs
     TSProperty  = { fg = p.fg },

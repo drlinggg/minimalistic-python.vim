@@ -6,12 +6,12 @@
 return {
   bg     = "#000000", -- pure black background
   fg     = "#f0f0f0", -- white symbols: text, variables, operators, builtins
-  gray   = "#6e757f", -- comments, punctuation, line numbers
+  gray   = "#a7adb8", -- comments, punctuation, line numbers (light gray)
   dim    = "#7a828c", -- faded-out / unused code (coc CocFadeOut, unused vars)
   red    = "#f15b5b", -- strings, chars, escapes
   pink   = "#f48fb8", -- numbers, booleans, None, constants
-  green  = "#7fb86a", -- keywords: def/class/return/import/control, decorators
-  green2 = "#5fc99e", -- function, class and type names (cool sea-green)
+  green  = "#d63384", -- keywords: def/class/return/import/control, decorators (raspberry)
+  green2 = "#ff6f91", -- function, class and type names (watermelon rose)
 
   -- Derived dark UI shades (neutral chrome, not part of the syntax palette).
   selection  = "#2a2f3a", -- visual selection
